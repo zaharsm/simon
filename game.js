@@ -7,7 +7,7 @@ var level = 0;
 
 $("body").on("keypress",function(){
     if(!started){
-        $("#title").text("level " +level);
+        $("#title").text("Level " +level);
         nextSequence();
         started = true;
     }
@@ -17,7 +17,7 @@ function nextSequence(){
     userChoosenColour = [];
     level++;
 
-    $("#title").text("level "+level);
+    $("#title").text("Level "+level);
     var randomNumber =Math.floor(Math.random()*4);
     var randomColor =buttonColour[randomNumber];
 
@@ -75,9 +75,10 @@ function checkAnswer(currentLevel){
         setTimeout(function(){
             $("body").removeClass("game-over")
         },200)
+        startAgain();
     }
 
-    startAgain();
+    
 
 }
 
