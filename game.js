@@ -5,7 +5,7 @@ var userChoosenColour = [];
 var started =false;
 var level = 0;
 
-$("body").on("keypress",function(){
+$("body").on("keypress touchstart",function(){
     if(!started){
         $("#title").text("Level " +level);
         nextSequence();
